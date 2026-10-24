@@ -2,7 +2,7 @@
   "name": "@midasdijital/ideasoft-help-widget",
   "version": "2.0.0-rc.2",
   "private": true,
-  "description": "IdeaSoft mağazaları için WhatsApp ve destek bağlantılarını sunan, mobil uyumlu ve özelleştirilebilir yardım bileşeni. Midas Dijital e-ticaret danışmanlık ajansı tarafından geliştirilmiştir.",
+  "description": "Configurable, mobile-friendly WhatsApp and support widget for IdeaSoft stores, developed by Midas Dijital.",
   "license": "MIT",
   "engines": {
     "node": "^24.15.0 || >=26.0.0"

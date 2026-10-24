@@ -91,3 +91,11 @@ scripts/            Kontrol ve dağıtım araçları
 [Güvenlik politikası](SECURITY.md) · [Katkı rehberi](CONTRIBUTING.md) · [Değişiklik günlüğü](CHANGELOG.md) · [MIT lisansı](LICENSE)
 
 API anahtarı, sipariş bilgisi ve müşteri verisi eklemeyin. Açık kaynak bileşen hizmet seviyesi veya tüm temalarda çalışma garantisi içermez.
+
+## Telif ve atıf
+
+Bu proje MIT lisansıyla paylaşılır. Yazılımın kopyalarını veya önemli bölümlerini kullanırken ya da yeniden dağıtırken [LICENSE](LICENSE) dosyasındaki **Ömer Mustafa ARDA** ve **Midas Dijital E-Ticaret Danışmanlık** telif bildirimlerini ve lisans metnini korumalısınız. Bu koşul, değiştirilmiş veya ticari olarak dağıtılan kopyalar için de geçerlidir.
+
+MIT lisansı mağaza arayüzünde görünür bir Midas Dijital adı veya bağlantısı gösterme zorunluluğu getirmez. Görünür bir geliştirici kredisi eklemeniz memnuniyetle karşılanır.
+
+Geliştirmeye katkı için dil kuralları [katkı rehberinde](CONTRIBUTING.md) açıklanmıştır.
