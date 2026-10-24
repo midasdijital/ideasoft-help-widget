@@ -1,348 +1,89 @@
 # Midas IdeaSoft Help Widget
 
-IdeaSoft e-ticaret mağazaları için geliştirilmiş, hafif ve özelleştirilebilir **yardım ve müşteri destek widget'ı**.
+[![Doğrulama](https://github.com/midasdijital/midas-ideasoft-help-widget/actions/workflows/ci.yml/badge.svg)](https://github.com/midasdijital/midas-ideasoft-help-widget/actions/workflows/ci.yml)
 
-**Midas Dijital E-Ticaret Danışmanlık** tarafından geliştirilmiştir.
+IdeaSoft mağazaları için WhatsApp ve mağazanın destek sayfalarını erişilebilir bir panelde sunan, bağımsız JavaScript/CSS bileşeni.
 
-Widget; müşterilerin WhatsApp desteğine, kargo takip sayfasına, kampanyalara ve mağazanın belirlediği diğer bağlantılara hızlı şekilde ulaşmasını sağlar.
+**Midas Dijital**, e-ticaret danışmanlığı ve mağaza geliştirme hizmetleri sunan bir ajanstır. Bu proje ajansın açık kaynak tema bileşenidir; IdeaSoft'un resmî ürünü değildir.
 
-Mobil cihazlarda ekranı kaplamayan kompakt bir **yan kulakçık**, masaüstünde ise modern bir yardım butonu olarak çalışır.
-
----
+> **2.0 geliştirme sürümü:** Henüz kararlı release olarak yayınlanmadı. 1.x'teki sabit marka/WhatsApp numarası kaldırıldı. Geçerli bir destek bağlantısı yapılandırılmadıkça widget görünmez.
 
 ## Özellikler
 
-* IdeaSoft mağazalarıyla uyumlu
-* Vanilla JavaScript ile geliştirilmiştir
-* Harici framework gerektirmez
-* Mobil uyumlu responsive tasarım
-* Mobilde ekranın soluna sabitlenen kompakt yardım kulakçığı
-* Masaüstünde modern yardım butonu
-* Açılır müşteri destek paneli
-* WhatsApp destek entegrasyonu
-* Kargo takip bağlantısı
-* Kampanya bağlantısı
-* Özel bağlantılar eklenebilir
-* Marka logosu değiştirilebilir
-* Ana renk ve tasarım renkleri özelleştirilebilir
-* Başlık ve açıklamalar değiştirilebilir
-* Otomatik yardım mesajı gösterimi
-* Belirlenen sayfalarda widget tamamen gizlenebilir
-* Sepet ve ödeme sayfaları için hariç tutma desteği
-* Müşteri bazlı yapılandırılabilir
-* Geist font desteği
-* Hafif ve bağımsız yapı
-
----
-
-## Mobil Görünüm
-
-Mobil cihazlarda widget, ekranın sol tarafında küçük bir **yardım kulakçığı** olarak görüntülenir.
-
-Bu yapı özellikle e-ticaret mağazalarında:
-
-* ürün görsellerinin,
-* sepete ekle butonlarının,
-* mobil alt menünün,
-* ürün seçeneklerinin
-
-üzerinin kapatılmasını önlemek amacıyla tasarlanmıştır.
-
-Kullanıcı kulakçığa dokunduğunda tam yardım paneli açılır.
-
----
-
-## Masaüstü Görünüm
-
-Masaüstünde yardım sistemi mağazanın belirlenen köşesinde sabit olarak görüntülenir.
-
-Kapalı durumdayken minimal bir yardım butonu olarak çalışır. Kullanıcı butona tıkladığında destek seçeneklerinin bulunduğu panel açılır.
-
----
-
-## Destek Menüsü
-
-Varsayılan yapı aşağıdaki bağlantıları destekler:
-
-### WhatsApp Destek
-
-Kullanıcı WhatsApp desteğine yönlendirilir.
-
-Mesaja kullanıcının bulunduğu sayfanın URL'si otomatik olarak eklenebilir.
-
-Örnek:
-
-> Merhaba, web sitesinde şu sayfadayım:
-> [Sayfa URL'si]
-> Yardım almak istiyorum.
-
-### Kargom Nerede?
-
-Mağazanın kargo takip sayfasına yönlendirme yapılabilir.
-
-### Kampanyalar
-
-Aktif kampanyaların bulunduğu sayfaya bağlantı verilebilir.
-
-Sisteme ihtiyaç doğrultusunda yeni menü seçenekleri eklenebilir.
-
----
+- Masaüstünde yardım butonu, mobilde kompakt yan kulakçık.
+- Klavye ile açma/kapama, Escape ve odağı geri getirme.
+- WhatsApp ve güvenli HTTP(S) bağlantıları; yeni sekmede opener koruması.
+- Sepet/ödeme sayfalarında ve alt yollarında otomatik gizleme.
+- Kısa yardım balonu, marka rengi ve logo yapılandırması.
+- Çalışma zamanı bağımlılığı, uzak font, CDN ve izleme içermez.
+- Metinler DOM `textContent` ile yazılır; yapılandırmadaki HTML çalıştırılmaz.
 
 ## Kurulum
 
-Projeyi indirin veya klonlayın.
+1. Repoyu klonlayın veya doğrulanmış sürüm ZIP'ini açın.
+2. `src/ideasoft-help-popup.js` ve `src/ideasoft-help-popup.css` dosyalarını temanızın statik dosya alanına yükleyin.
+3. `config.example.js` dosyasını yerelde `config.local.js` adıyla kopyalayın. Marka, numara ve gerçekten var olan mağaza bağlantılarını düzenleyin. Bu dosya Git'e/dağıtım ZIP'ine alınmaz; tarayıcıdan sunulan içeriği herkes okuyabilir, bu yüzden gizli bilgi içermemelidir.
+4. Tema yerleşiminde aşağıdaki sırayla yükleyin. `/assets/` örnektir; gerçek URL'leri mağazanıza göre düzenleyin.
 
-```bash
-git clone https://github.com/omerarda77/midas-ideasoft-help-widget.git
+```html
+<link rel="stylesheet" href="/assets/ideasoft-help-popup.css" />
+<script src="/assets/config.local.js" defer></script>
+<script src="/assets/ideasoft-help-popup.js" defer></script>
 ```
 
-Ardından widget JavaScript dosyasını IdeaSoft mağazanızdaki uygun **Özel Kod / Custom Code** alanına ekleyin.
-
-Kullanılan IdeaSoft tema ve sürümüne göre kodun ekleneceği alan değişebilir.
-
----
+JavaScript dosyası `window.IDEASOFT_HELP_POPUP_CONFIG` değerini bir kez okur. `const config = { ... }` tanımlamak yeterli değildir. Dinamik SPA sayfa geçişleri bu sürümde desteklenmez; hariç tutma ilk sayfa yüklemesinde değerlendirilir. Kaynak dosyaları sayfa başına bir kez yükleyin. Tema önbelleğini temizleyin ve asset URL'lerinin 200 döndüğünü kontrol edin.
 
 ## Yapılandırma
 
-Widget farklı mağazalarda kullanılabilecek şekilde özelleştirilebilir olarak tasarlanmıştır.
-
-Örneğin:
+Tam örnek [config.example.js](config.example.js) içindedir. Asgari bir mağaza içi destek bağlantısı:
 
 ```javascript
-const config = {
-    brandName: "Marka Adı",
-
-    logoUrl: "LOGO_URL",
-
-    primaryColor: "#dc2237",
-
-    primaryColorDark: "#b91327",
-
-    whatsappNumber: "905XXXXXXXXX",
-
-    title: "Yardım Merkezi",
-
-    subtitle: "Size nasıl yardımcı olabiliriz?",
-
-    bubbleText: "Nasıl yardımcı olabiliriz?",
-
-    bubbleDelay: 3000,
-
-    bubbleDuration: 5000,
-
-    excludedPaths: [
-        "/sepet",
-        "/sepet/"
-    ]
+window.IDEASOFT_HELP_POPUP_CONFIG = {
+  brandName: 'Mağazanız',
+  title: 'Yardım merkezi',
+  actions: [{ type: 'link', text: 'Destek', href: '/destek' }],
 };
 ```
 
-Bu değerler değiştirilerek aynı widget farklı IdeaSoft mağazalarında kullanılabilir.
+`/destek` sayfası örnektir; kendi mağazanızda var olan yolu kullanın. WhatsApp için `whatsappNumber` ülke koduyla 8–15 rakam içermeli; `+`, boşluk ve parantez içermemelidir. Geçersiz/boş numara varsa WhatsApp eylemi gösterilmez. Numaranın doğruluğu ve kullanım izni mağazanın sorumluluğudur.
 
----
+- `brandName`, `title`, `subtitle`, `welcomeText`, `bubbleText`: düz metindir.
+- `logoUrl`: isteğe bağlı HTTP(S) görsel adresi. Tercihen aynı mağazada barındırın; uzak sunucu ziyaretçinin IP adresini görebilir. Görsel isteğinde referrer gönderilmez.
+- `primaryColor`: altı haneli HEX renk (`#9f1239`); değiştirdiğinizde beyaz buton metninin kontrastını kontrol edin.
+- `bubbleDelay`, `bubbleDuration`: 0–60000 ms; süreyi `0` yaparak balonu kapatabilirsiniz.
+- `actions`: en fazla 12 adet `link` / `whatsapp` eylemi. Link için `href`, isteğe bağlı `target: '_blank'` kullanılır. `javascript:`, `data:`, kimlik bilgili URL'ler ve HTTPS sayfada HTTP bağlantıları reddedilir.
+- `excludedPaths`: ek gizleme yolları. Büyük/küçük harf, sondaki slash ve alt yollar dikkate alınır. `/sepet` ve `/odeme` her zaman gizlidir; mağazanızdaki diğer ödeme yollarını ayrıca ekleyin.
+- `includePageUrl`: varsayılan `false`. Açılırsa WhatsApp mesajına yalnızca origin ve pathname eklenir; query parametreleri/hash eklenmez. Yolun kendisi de kişisel bilgi içerebilir; mağazanız için değerlendirin. Mesaj yalnızca müşteri bağlantıya tıklayınca WhatsApp'a gider.
 
-## Renk Özelleştirme
+## 1.x'ten geçiş
 
-Ana marka rengi:
+Eski inline widget'ı ve ZIP'teki eski dosyaları kaldırın. Yeni CSS ve JavaScript'i birlikte yükleyin. Ayarları doğru global değişkenle script'ten önce tanımlayın. Varsayılan müşteri markası ve numarası yoktur. Eski `primaryColorDark`, `desktop`, `mobile` ve `icon` ayarları bu sürümde kullanılmaz; konum/boyut için `.md-help` CSS sınıflarını kendi tema dosyanızda düzenleyin. Bu geçiş arayüz ve yapılandırma değişikliği içerir.
 
-```javascript
-primaryColor: "#dc2237"
+## Geliştirme ve dağıtım
+
+Node.js yalnızca geliştirme içindir. Node 24.15+ kullanın.
+
+```sh
+git clone https://github.com/midasdijital/midas-ideasoft-help-widget.git
+cd midas-ideasoft-help-widget
+npm ci --ignore-scripts
+npm run validate
 ```
 
-Gradient veya koyu yardımcı renk:
-
-```javascript
-primaryColorDark: "#b91327"
-```
-
-Bu alanları müşterinin kurumsal renklerine göre değiştirebilirsiniz.
-
----
-
-## Logo
-
-Logo URL üzerinden tanımlanabilir:
-
-```javascript
-logoUrl: "https://example.com/logo.png"
-```
-
-Kare veya kareye yakın logolar mobil kulakçık görünümünde daha iyi sonuç verir.
-
----
-
-## WhatsApp
-
-WhatsApp numarası ülke koduyla birlikte ve boşluksuz girilmelidir.
-
-```javascript
-whatsappNumber: "905XXXXXXXXX"
-```
-
-Türkiye için örnek format:
+Kontroller sözdizimi, biçimlendirme, DOM davranış testleri ve ZIP üretimini kapsar. CI ayrıca `npm audit` çalıştırır. `npm run build`, aynı kaynakta aynı baytları veren `dist/midas-ideasoft-help-widget-v2.0.0.zip` üretir. Yerel müşteri ayarları ve geliştirme bağımlılıkları pakete alınmaz. CI artifact'i kararlı release anlamına gelmez.
 
 ```text
-905321234567
+src/                JavaScript ve CSS
+config.example.js   Hassas veri içermeyen örnek ayarlar
+docs/               Mağaza kabul kontrolleri
+tests/              Güvenlik ve erişilebilirlik davranış testleri
+scripts/            Kontrol ve dağıtım araçları
 ```
 
-`+`, boşluk veya parantez kullanılmaması önerilir.
+[Mağaza kabul kontrollerini](docs/store-checklist.md) test temasında tamamlayın. DOM testleri gerçek tarayıcı/IdeaSoft tema testi veya tam erişilebilirlik denetimi değildir. Kod mağazanın ağ isteğine, ödemeye veya sipariş verisine erişmez.
 
----
+## Güvenlik, katkı ve lisans
 
-## Hariç Tutulan Sayfalar
+[Güvenlik politikası](SECURITY.md) · [Katkı rehberi](CONTRIBUTING.md) · [Değişiklik günlüğü](CHANGELOG.md) · [MIT lisansı](LICENSE)
 
-Widget'ın görüntülenmemesi gereken sayfalar tanımlanabilir.
-
-Örneğin:
-
-```javascript
-excludedPaths: [
-    "/sepet",
-    "/sepet/",
-    "/odeme",
-    "/odeme/"
-]
-```
-
-Bu özellik özellikle **sepet ve ödeme akışında** müşterinin dikkatinin dağılmasını veya widget'ın diğer arayüz bileşenlerinin üzerine gelmesini önlemek için kullanılabilir.
-
----
-
-## Otomatik Yardım Balonu
-
-Widget belirli bir süre sonra kullanıcıya otomatik olarak kısa bir yardım mesajı gösterebilir.
-
-```javascript
-bubbleDelay: 3000,
-bubbleDuration: 5000
-```
-
-Bu örnekte mesaj:
-
-* Sayfa açıldıktan **3 saniye sonra** gösterilir.
-* **5 saniye** boyunca görünür.
-* Ardından otomatik olarak kapanır.
-
----
-
-## Dosya Yapısı
-
-```text
-midas-ideasoft-help-widget/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-├── config.example.js
-│
-└── src/
-    └── ideasoft-help-popup.js
-```
-
----
-
-## Güvenlik
-
-Gerçek müşteri bilgilerini doğrudan public GitHub reposuna eklemeyin.
-
-Özellikle aşağıdaki bilgiler kontrol edilmelidir:
-
-* Gerçek müşteri WhatsApp numaraları
-* API anahtarları
-* Erişim tokenları
-* Yönetim paneli bilgileri
-* Müşteriye özel gizli URL'ler
-* Şifreler
-* Diğer özel entegrasyon bilgileri
-
-Müşteriye özel yapılandırmalar `.gitignore` ile repository dışında tutulabilir.
-
-Örnek:
-
-```gitignore
-config.js
-.env
-
-.DS_Store
-Thumbs.db
-
-.vscode/
-.idea/
-
-*.log
-```
-
-Repository içerisinde gerçek `config.js` yerine örnek bir:
-
-```text
-config.example.js
-```
-
-dosyası paylaşılması önerilir.
-
----
-
-## Teknolojiler
-
-* JavaScript
-* HTML
-* CSS
-* IdeaSoft
-* WhatsApp URL entegrasyonu
-
-Herhangi bir JavaScript framework'üne bağımlı değildir.
-
----
-
-## Uyumluluk
-
-Proje öncelikli olarak **IdeaSoft e-ticaret altyapısında** kullanılmak üzere geliştirilmiştir.
-
-Tema yapısına ve mağazada kullanılan diğer özel kodlara bağlı olarak ek CSS düzenlemeleri gerekebilir.
-
----
-
-## Geliştirici
-
-**Midas Dijital E-Ticaret Danışmanlık**
-
-E-ticaret altyapıları, pazaryeri yönetimi, özel e-ticaret geliştirmeleri ve dijital ticaret çözümleri.
-
-Bu proje Midas Dijital tarafından IdeaSoft mağazalarında müşteri destek deneyimini geliştirmek amacıyla hazırlanmıştır.
-
----
-
-## Katkıda Bulunma
-
-Hata bildirimi, geliştirme önerisi veya yeni özellik talebi için GitHub Issues kullanılabilir.
-
-Pull Request göndermeden önce yapılan değişikliklerin mobil ve masaüstü görünümlerinde test edilmesi önerilir.
-
----
-
-## Lisans
-
-Bu proje **MIT License** altında yayınlanmaktadır.
-
-Detaylar için `LICENSE` dosyasını inceleyebilirsiniz.
-
----
-
-## Sürüm
-
-**v1.0.0**
-
-İlk kararlı sürüm:
-
-* Mobil yardım kulakçığı
-* Masaüstü yardım widget'ı
-* WhatsApp entegrasyonu
-* Kargo takip yönlendirmesi
-* Kampanya yönlendirmesi
-* Otomatik yardım balonu
-* Sayfa hariç tutma sistemi
-* Marka bazlı renk ve logo özelleştirme
-
----
-
-© 2026 **Midas Dijital E-Ticaret Danışmanlık**
+API anahtarı, sipariş bilgisi ve müşteri verisi eklemeyin. Açık kaynak bileşen hizmet seviyesi veya tüm temalarda çalışma garantisi içermez.
