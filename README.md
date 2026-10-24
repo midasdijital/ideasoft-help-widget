@@ -6,7 +6,7 @@ IdeaSoft mağazaları için WhatsApp ve mağazanın destek sayfalarını erişil
 
 **Midas Dijital**, e-ticaret danışmanlığı ve mağaza geliştirme hizmetleri sunan bir ajanstır. Bu proje ajansın açık kaynak tema bileşenidir; IdeaSoft'un resmî ürünü değildir.
 
-> **2.0 geliştirme sürümü:** Henüz kararlı release olarak yayınlanmadı. 1.x'teki sabit marka/WhatsApp numarası kaldırıldı. Geçerli bir destek bağlantısı yapılandırılmadıkça widget görünmez.
+> **2.0.0-rc.1 ön sürümü:** Bu sürüm ön sürümdür; gerçek mağaza doğrulaması tamamlanmadan kararlı kabul edilmez. 1.x'teki sabit marka/WhatsApp numarası kaldırıldı. Geçerli bir destek bağlantısı yapılandırılmadıkça widget görünmez.
 
 ## Özellikler
 
@@ -59,6 +59,10 @@ window.IDEASOFT_HELP_POPUP_CONFIG = {
 
 Eski inline widget'ı ve ZIP'teki eski dosyaları kaldırın. Yeni CSS ve JavaScript'i birlikte yükleyin. Ayarları doğru global değişkenle script'ten önce tanımlayın. Varsayılan müşteri markası ve numarası yoktur. Eski `primaryColorDark`, `desktop`, `mobile` ve `icon` ayarları bu sürümde kullanılmaz; konum/boyut için `.md-help` CSS sınıflarını kendi tema dosyanızda düzenleyin. Bu geçiş arayüz ve yapılandırma değişikliği içerir.
 
+## Sürümü indirme
+
+[v2.0.0-rc.1 ön sürümü](https://github.com/midasdijital/midas-ideasoft-help-widget/releases/tag/v2.0.0-rc.1) sayfasından kurulum ZIP'ini ve `SHA256SUMS.txt` dosyasını indirin. `Source code` arşivleri GitHub'ın otomatik kaynak kopyalarıdır; kuruluma yönelik paket sürüm adını taşıyan ZIP'tir. Kurulumdan önce README geçiş adımlarını izleyin.
+
 ## Geliştirme ve dağıtım
 
 Node.js yalnızca geliştirme içindir. Node 24.15+ kullanın.
@@ -70,7 +74,7 @@ npm ci --ignore-scripts
 npm run validate
 ```
 
-Kontroller sözdizimi, biçimlendirme, DOM davranış testleri ve ZIP üretimini kapsar. CI ayrıca `npm audit` çalıştırır. `npm run build`, aynı kaynakta aynı baytları veren `dist/midas-ideasoft-help-widget-v2.0.0.zip` üretir. Yerel müşteri ayarları ve geliştirme bağımlılıkları pakete alınmaz. CI artifact'i kararlı release anlamına gelmez.
+Kontroller sözdizimi, biçimlendirme, DOM davranış testleri ve ZIP üretimini kapsar. CI ayrıca `npm audit` çalıştırır. `npm run build`, aynı kaynakta aynı baytları veren `dist/midas-ideasoft-help-widget-v2.0.0-rc.1.zip` üretir. Yerel müşteri ayarları ve geliştirme bağımlılıkları pakete alınmaz. CI artifact'i kararlı release anlamına gelmez.
 
 ```text
 src/                JavaScript ve CSS
