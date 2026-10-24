@@ -1,6 +1,6 @@
 {
-  "name": "@midasdijital/midas-ideasoft-help-widget",
-  "version": "2.0.0-rc.1",
+  "name": "@midasdijital/ideasoft-help-widget",
+  "version": "2.0.0-rc.2",
   "private": true,
   "description": "IdeaSoft mağazaları için WhatsApp ve destek bağlantılarını sunan, mobil uyumlu ve özelleştirilebilir yardım bileşeni. Midas Dijital e-ticaret danışmanlık ajansı tarafından geliştirilmiştir.",
   "license": "MIT",
@@ -21,9 +21,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/midasdijital/midas-ideasoft-help-widget.git"
+    "url": "https://github.com/midasdijital/ideasoft-help-widget.git"
   },
   "bugs": {
-    "url": "https://github.com/midasdijital/midas-ideasoft-help-widget/issues"
+    "url": "https://github.com/midasdijital/ideasoft-help-widget/issues"
   }
 }

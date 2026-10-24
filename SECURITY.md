@@ -8,7 +8,7 @@ Güvenlik düzeltmeleri `main` dalına uygulanır. 2.x geliştirme hattı günce
 
 ## Açık bildirme
 
-Müşteri verisi veya istismar ayrıntılarını public issue içinde paylaşmayın. [GitHub özel güvenlik bildirimi](https://github.com/midasdijital/midas-ideasoft-help-widget/security/advisories/new) etkinse bu kanalı kullanın. Etkin değilse ajansla mevcut özel iletişim kanalınızdan iletişime geçin. Bildirimde etkilenen sürümü, etkiyi ve hassas veri içermeyen tekrarlama adımlarını belirtin. Bir yanıt süresi garantisi verilmez.
+Müşteri verisi veya istismar ayrıntılarını public issue içinde paylaşmayın. [GitHub özel güvenlik bildirimi](https://github.com/midasdijital/ideasoft-help-widget/security/advisories/new) etkinse bu kanalı kullanın. Etkin değilse ajansla mevcut özel iletişim kanalınızdan iletişime geçin. Bildirimde etkilenen sürümü, etkiyi ve hassas veri içermeyen tekrarlama adımlarını belirtin. Bir yanıt süresi garantisi verilmez.
 
 ## Entegrasyon sınırı
 
