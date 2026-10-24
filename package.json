@@ -1,8 +1,8 @@
 {
   "name": "@midasdijital/midas-ideasoft-help-widget",
-  "version": "2.0.0",
+  "version": "2.0.0-rc.1",
   "private": true,
-  "description": "Midas Dijital tarafından geliştirilen IdeaSoft tema bileşeni.",
+  "description": "IdeaSoft mağazaları için WhatsApp ve destek bağlantılarını sunan, mobil uyumlu ve özelleştirilebilir yardım bileşeni. Midas Dijital e-ticaret danışmanlık ajansı tarafından geliştirilmiştir.",
   "license": "MIT",
   "engines": {
     "node": "^24.15.0 || >=26.0.0"
