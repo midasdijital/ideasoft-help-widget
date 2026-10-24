@@ -1,5 +1,12 @@
 # Değişiklik günlüğü
 
+## 2.0.0-rc.2 — 24 Ekim 2026 (Ön sürüm)
+
+- Repo adı `ideasoft-help-widget` olarak sadeleştirildi.
+- Paket adı, klonlama adresi, güvenlik bildirimi ve sürüm bağlantıları yeni adla güncellendi.
+- Dağıtım ZIP adı ve iç klasörü yeni paket adıyla eşitlendi.
+- Çalışma zamanı davranışı değişmedi; v2.0.0-rc.1 etiketi ve ekleri korundu.
+
 ## 2.0.0-rc.1 — 24 Ekim 2026 (Ön sürüm)
 
 ### Değişti

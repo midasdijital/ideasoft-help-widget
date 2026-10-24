@@ -1,12 +1,12 @@
-# Midas IdeaSoft Help Widget
+# IdeaSoft Help Widget
 
-[![Doğrulama](https://github.com/midasdijital/midas-ideasoft-help-widget/actions/workflows/ci.yml/badge.svg)](https://github.com/midasdijital/midas-ideasoft-help-widget/actions/workflows/ci.yml)
+[![Doğrulama](https://github.com/midasdijital/ideasoft-help-widget/actions/workflows/ci.yml/badge.svg)](https://github.com/midasdijital/ideasoft-help-widget/actions/workflows/ci.yml)
 
 IdeaSoft mağazaları için WhatsApp ve mağazanın destek sayfalarını erişilebilir bir panelde sunan, bağımsız JavaScript/CSS bileşeni.
 
 **Midas Dijital**, e-ticaret danışmanlığı ve mağaza geliştirme hizmetleri sunan bir ajanstır. Bu proje ajansın açık kaynak tema bileşenidir; IdeaSoft'un resmî ürünü değildir.
 
-> **2.0.0-rc.1 ön sürümü:** Bu sürüm ön sürümdür; gerçek mağaza doğrulaması tamamlanmadan kararlı kabul edilmez. 1.x'teki sabit marka/WhatsApp numarası kaldırıldı. Geçerli bir destek bağlantısı yapılandırılmadıkça widget görünmez.
+> **2.0.0-rc.2 ön sürümü:** Bu sürüm ön sürümdür; gerçek mağaza doğrulaması tamamlanmadan kararlı kabul edilmez. 1.x'teki sabit marka/WhatsApp numarası kaldırıldı. Geçerli bir destek bağlantısı yapılandırılmadıkça widget görünmez.
 
 ## Özellikler
 
@@ -61,20 +61,20 @@ Eski inline widget'ı ve ZIP'teki eski dosyaları kaldırın. Yeni CSS ve JavaSc
 
 ## Sürümü indirme
 
-[v2.0.0-rc.1 ön sürümü](https://github.com/midasdijital/midas-ideasoft-help-widget/releases/tag/v2.0.0-rc.1) sayfasından kurulum ZIP'ini ve `SHA256SUMS.txt` dosyasını indirin. `Source code` arşivleri GitHub'ın otomatik kaynak kopyalarıdır; kuruluma yönelik paket sürüm adını taşıyan ZIP'tir. Kurulumdan önce README geçiş adımlarını izleyin.
+[v2.0.0-rc.2 ön sürümü](https://github.com/midasdijital/ideasoft-help-widget/releases/tag/v2.0.0-rc.2) sayfasından kurulum ZIP'ini ve `SHA256SUMS.txt` dosyasını indirin. `Source code` arşivleri GitHub'ın otomatik kaynak kopyalarıdır; kuruluma yönelik paket sürüm adını taşıyan ZIP'tir. Kurulumdan önce README geçiş adımlarını izleyin.
 
 ## Geliştirme ve dağıtım
 
 Node.js yalnızca geliştirme içindir. Node 24.15+ kullanın.
 
 ```sh
-git clone https://github.com/midasdijital/midas-ideasoft-help-widget.git
-cd midas-ideasoft-help-widget
+git clone https://github.com/midasdijital/ideasoft-help-widget.git
+cd ideasoft-help-widget
 npm ci --ignore-scripts
 npm run validate
 ```
 
-Kontroller sözdizimi, biçimlendirme, DOM davranış testleri ve ZIP üretimini kapsar. CI ayrıca `npm audit` çalıştırır. `npm run build`, aynı kaynakta aynı baytları veren `dist/midas-ideasoft-help-widget-v2.0.0-rc.1.zip` üretir. Yerel müşteri ayarları ve geliştirme bağımlılıkları pakete alınmaz. CI artifact'i kararlı release anlamına gelmez.
+Kontroller sözdizimi, biçimlendirme, DOM davranış testleri ve ZIP üretimini kapsar. CI ayrıca `npm audit` çalıştırır. `npm run build`, aynı kaynakta aynı baytları veren `dist/ideasoft-help-widget-v2.0.0-rc.2.zip` üretir. Yerel müşteri ayarları ve geliştirme bağımlılıkları pakete alınmaz. CI artifact'i kararlı release anlamına gelmez.
 
 ```text
 src/                JavaScript ve CSS
